@@ -98,11 +98,11 @@ app.post("/sendMail", urlencodedParser, function (request, response) {
   // 输出 JSON 格式
   const { ...param} = request.body;
   data = {
-    mailAddress: param.mailAddress || "939045919@qq.com",
+    mailAddress: param.mailAddress || "",
     mailTitle: param.mailTitle || "测试邮件",
-    targetAddress: param.targetAddress || "yangzhimin@vv.cn",
+    targetAddress: param.targetAddress || "",
     sendMan:
-    param.sendMan || param.mailAddress || "939045919@qq.com",
+    param.sendMan || param.mailAddress || "",
     templateHtmlContent: param.templateHtmlContent || "邮件内容",
     pass: param.pass,
   };
