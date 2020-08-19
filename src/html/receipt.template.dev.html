@@ -1,0 +1,704 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Thank you ! This is your V V E-Receipt</title>
+<meta name="viewport" content="width=device-width; initial-scale=1.0;">
+<style type="text/css">
+    /* === Reset Style === */
+        html {
+            width: 100%;
+        }
+        body {/* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/
+            width:100% !important;
+            margin:0px;
+            padding:0px;
+            text-align:left;
+            -webkit-text-size-adjust:100%;
+            -ms-text-size-adjust:100%;
+        }
+        #outlook a {/* Force Outlook to provide a "view in browser" menu link. */
+            padding:0;
+        }
+        .ReadMsgBody {
+            width: 100%;
+        }
+        .ExternalClass {/* Force Hotmail to display emails at full width */
+            width: 100%;
+        }
+
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div {/* Forces Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */
+            line-height: 100%;
+        }
+        .kd-mail-template img {
+            border:0px;
+            text-decoration:none;
+            outline:none;
+            margin: 0;
+        }
+        .kd-mail-template a,
+        .kd-mail-template a:hover {
+            color:#008ABE;
+        }
+        .kd-mail-template,
+        .kd-mail-template table {
+            border-collapse:collapse;
+            mso-table-lspace:0pt;
+            mso-table-rspace:0pt;
+            font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, Geneva, sans-serif;
+            font-size:12px;
+            line-height:1.333333333333333em;
+            width:100%;
+            color: #333;
+        }
+        .kd-mail-template table.auto-width {
+            width: auto;
+        }
+
+        /**
+         * use <div class="kd-table-center" style="width: 1000px;"> wrapper a table
+         * note: need give one fix width
+         */
+        .kd-mail-template .kd-table-center {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+    /* === Template Style === */
+        /* layout */
+        .kd-mail-template .kd-mail-wrapper {
+            background:#F1F2F4;
+        }
+        .kd-mail-template .kd-container {
+            background:#ffffff;
+            font-size:14px;
+            line-height:20px;
+            width:600px;
+        }
+        .kd-mail-template .kd-row .span-offset {
+            width:20px;
+        }
+        .kd-mail-template .kd-row .span-two-1 {width:290px;}
+        .kd-mail-template .kd-row .span-two-2 {width:290px;}
+
+        .kd-mail-template .kd-row .span-three-1 {width:187px;}
+        .kd-mail-template .kd-row .span-three-2 {width:186px;}
+        .kd-mail-template .kd-row .span-three-3 {width:187px;}
+
+        .kd-mail-template .kd-row .span-four-1 {width:135px;}
+        .kd-mail-template .kd-row .span-four-2 {width:135px;}
+        .kd-mail-template .kd-row .span-four-3 {width:135px;}
+        .kd-mail-template .kd-row .span-four-4 {width:135px;}
+
+        .kd-mail-template .kd-row .span-five-1 {width:104px;}
+        .kd-mail-template .kd-row .span-five-2 {width:104px;}
+        .kd-mail-template .kd-row .span-five-3 {width:104px;}
+        .kd-mail-template .kd-row .span-five-4 {width:104px;}
+        .kd-mail-template .kd-row .span-five-5 {width:104px;}
+
+        /* .kd-mail-template .kd-header {} */
+        /* .kd-mail-template .kd-body {} */
+        .kd-mail-template .kd-footer {
+            background: #F1F2F4;
+        }
+        /* padding for <td> */
+        .kd-mail-template .kd-padding {
+            font-size:0;
+            line-height:0;
+        }
+        .kd-mail-template .kd-padding.top,
+        .kd-mail-template .kd-padding.bottom {
+            height:20px;
+        }
+        .kd-mail-template .kd-padding.left,
+        .kd-mail-template .kd-padding.right {
+            width:20px;
+        }
+        /* border for <td> */
+        .kd-mail-template .kd-border {
+            background:#dcdcdc;
+            font-size:0;
+            line-height:0;
+        }
+        .kd-mail-template .kd-border.top,
+        .kd-mail-template .kd-border.bottom {
+            height:1px;
+        }
+        .kd-mail-template .kd-border.left,
+        .kd-mail-template .kd-border.right {
+            width:1px;
+        }
+        /* line for <td> */
+        .kd-mail-template .kd-line {
+            background:#D8D8D8;
+            height:1px;
+            font-size:0;
+            line-height:0;
+        }
+        .kd-mail-template .kd-line.dashed {
+            background: none;
+        }
+        /* blank for <td> */
+        .kd-mail-template .kd-blank {
+            height:20px;
+            font-size:0;
+            line-height:0;
+        }
+        /* headings */
+        .kd-mail-template .kd-heading {
+            font-weight:bold;
+        }
+        .kd-mail-template .kd-heading.one {
+            font-size:30px;
+        }
+        .kd-mail-template .kd-heading.two {
+            font-size:24px;
+            line-height:29px;
+            color: #333;
+        }
+        .kd-mail-template .kd-heading.three {
+            font-size:18px;
+        }
+        .kd-mail-template .kd-heading.four {
+            font-size:16px;
+        }
+        .kd-mail-template .kd-heading.five {
+            font-size:14px;
+        }
+        .kd-mail-template .kd-heading.six {
+            font-size:12px;
+        }
+        /* paragraph */
+        /* .kd-mail-template .kd-paragraph {} */
+        /* list */
+        /* .kd-mail-template .kd-list {} */
+        .kd-mail-template .kd-list > tbody > tr > .kd-list-icon {
+            font-weight:bold;
+            width:15px;
+        }
+        /* .kd-mail-template .kd-list > tbody > tr > .kd-list-content {} */
+        /* emphasizes */
+        .kd-mail-template .kd-strong {
+            font-weight:bold;
+        }
+        .kd-mail-template .kd-italic {
+            font-style:italic;
+        }
+        .kd-mail-template .kd-underline {
+            text-decoration:underline;
+        }
+        /* link */
+        .kd-mail-template a {
+            color:#ff0000;
+        }
+        /* media */
+        .kd-mail-template .kd-image {
+            border:0;
+            margin: 0;
+        }
+        /* button */
+        .kd-button {
+            display: block;
+            text-decoration: none;
+            width: 350px;
+        }
+        .kd-button table {
+            background: #05db5c;
+            border-bottom: 1px solid #40c274;
+            color: #fff;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    /* === Header === */
+        .kd-mail-template .top-line {
+            background: #F38700;
+            height: 5px;
+        }
+        .kd-mail-template .logo {
+            width: 89px;
+            height: 89px;
+        }
+        .kd-images-logo{
+            width: 88px;
+            height: 89px;
+        }
+    /* === Body === */
+        /* Highlight Color */
+        .kd-mail-template .highlight-orange {
+            color: #F38700;
+        }
+        /* Bold */
+        .kd-mail-template .bold {
+            font-weight: bold;
+        }
+        /* UpperCase */
+        .kd-mail-template .uppercase {
+            text-transform: uppercase;
+        }
+        /* hope words */
+        .kd-mail-template .hope-words-content {
+            background: #EBEBEB;
+            color: #333;
+        }
+        /* Total Section */
+        .kd-mail-template .total-section table,
+        .kd-mail-template .total-section-title {
+            color: #6D6D6D;
+        }
+        .kd-mail-template .total-section-title {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .kd-mail-template .total-section-money {
+            font-size: 32px;
+        }
+        /* Basic Information Section */
+        /* .kd-mail-template .basic-info-section {} */
+        .kd-mail-template .keyvalue-list {
+            width: auto;
+        }
+        .kd-mail-template .kv-item-key {
+            color: #6D6D6D;
+            white-space: nowrap !important;
+        }
+        .kd-mail-template .kv-item-value {
+            color: #333333;
+            font-weight: bold;
+        }
+        /* Order Summary Section */
+        .kd-mail-template .order-summary-section-title .kd-content {
+            color: #6D6D6D;
+            font-weight: bold;
+        }
+        /* Detail Table */
+        .kd-mail-template .detail-table td {
+            padding: 5px 0;
+            font-weight: bold;
+        }
+        .kd-mail-template .detail-table td.kd-line {
+            padding: 0;
+        }
+        .kd-mail-template .detail-table-title {
+            color: #6D6D6D;
+        }
+        .kd-mail-template .detail-table-title td {
+            font-weight: normal;
+        }
+        .kd-mail-template .gst-total-price {
+            font-size: 18px;
+        }
+    /* === Footer === */
+        .kd-mail-template .kd-footer {
+            color: #B3B3B3;
+        }
+        .kd-mail-template .links-list a {
+            color: #B3B3B3;
+        }
+    /* === Response === */
+        /* @media only screen and (max-width: 640px) {
+            body{
+                width:auto!important;
+            }
+            .kd-mail-template .kd-container {
+                width: auto !important;
+            }
+        } */
+</style>
+</head>
+<body>
+<!--Mail Template Start-->
+<table cellpadding="0" cellspacing="0" border="0" class="kd-mail-template">
+    <tr><td align="center" valign="top" class="kd-mail-wrapper">
+        <div class="kd-table-center" style="width: 600px;"><table border="0" cellpadding="0" cellspacing="0" class="kd-container">
+            <tr><td align="center" valign="top">
+                <!--Line Start-->
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td align="left" valign="top" class="kd-line top-line">&nbsp;</td>
+                    </tr>
+                </table>
+                <!--Line End-->
+            </td></tr>
+            <tr><td align="center" valign="top">
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <!--Header Start-->
+                    <tr><td align="left" valign="top" class="kd-header">
+                        <div class="kd-table-center" style="width: 160px;"><table cellpadding="0" cellspacing="0" border="0" class="auto-width">
+                            <tr>
+                                <td align="left" valign="top" class="kd-blank" style="height: 25px;">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="top" class="kd-content"><img class="kd-images-logo" src="../images/logo20040429.png" alt="logo"></td>
+                            </tr>
+                            <tr>
+                                <td align="left" valign="top" class="kd-blank" style="height: 30px;">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="top" class="kd-content">
+                                    <div class="kd-heading two">Order Receipt</div>
+                                </td>
+                            </tr>
+                        </table></div>
+                    </td></tr>
+                    <!--Header End-->
+
+                    <!--Body Start-->
+                    <tr><td align="left" valign="top" class="kd-body">
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td align="left" valign="top" class="kd-blank" style="width: 50px;">&nbsp;</td>
+                                <td align="left" valign="top" class="kd-content" style="width: 500px;">
+                                    <!--Blank Start-->
+                                    <table cellpadding="0" cellspacing="0" border="0">
+                                        <tr><td align="left" valign="top" class="kd-blank" style="height: 20px;">&nbsp;</td></tr>
+                                    </table>
+                                    <!--Blank End-->
+
+                                    <!--Blank Start-->
+                                    <table cellpadding="0" cellspacing="0" border="0">
+                                        <tr><td align="left" valign="top" class="kd-blank" style="height: 20px;">&nbsp;</td></tr>
+                                    </table>
+                                    <!--Blank End-->
+
+                                    <!--Total Section Start-->
+                                    <table cellpadding="0" cellspacing="0" border="0" class="total-section">
+                                        <tr><td align="left" valign="top" class="total-section-title">Total</td></tr>
+                                        <tr><td align="center" valign="top" class="total-section-content">
+                                            <table cellpadding="0" cellspacing="0" border="0">
+                                                <tr>
+                                                    <td align="left" valign="top" style="width: 350px;">
+                                                        <table cellpadding="0" cellspacing="0" border="0">
+                                                            <tr>
+                                                                <td align="left" valign="middle" class="total-section-money" style="height: 48px;"><span class="highlight-orange">SGD 13.00</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top">Receipt No : <span class="highlight-orange">1234567891234567891R</span></td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td align="left" valign="top" style="width: 150px;">
+                                                        <table cellpadding="0" cellspacing="0" border="0">
+                                                            <tr>
+                                                                <td align="right" valign="top">Date : </td>
+                                                                <td align="left" valign="top"><span class="highlight-orange"> 12-09-2019</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top" class="kd-blank" style="height: 8px;">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="right" valign="top">Time : </td>
+                                                                <td align="left" valign="top"><span class="highlight-orange"> 15:00</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top" class="kd-blank" style="height: 8px;">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="right" valign="top">GST No : </td>
+                                                                <td align="left" valign="top"><span class="highlight-orange"> 201632145M</span></td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td></tr>
+                                    </table>
+                                    <!--Total Section End-->
+
+                                    <!--Blank Start-->
+                                    <table cellpadding="0" cellspacing="0" border="0">
+                                        <tr><td align="left" valign="top" class="kd-blank" style="height: 10px;">&nbsp;</td></tr>
+                                    </table>
+                                    <!--Blank End-->
+
+                                    <!--Line Start-->
+                                    <table cellpadding="0" cellspacing="0" border="0">
+                                        <tr><td align="left" valign="top" class="kd-line">&nbsp;</td></tr>
+                                    </table>
+                                    <!--Line End-->
+
+                                    <!--Blank Start-->
+                                    <table cellpadding="0" cellspacing="0" border="0">
+                                        <tr><td align="left" valign="top" class="kd-blank" style="height: 15px;">&nbsp;</td></tr>
+                                    </table>
+                                    <!--Blank End-->
+
+                                    <!--Basic Information Start-->
+                                    <table cellpadding="0" cellspacing="0" border="0" class="basic-info-section">
+                                        <tr><td align="left" valign="top">
+                                            <table cellpadding="0" cellspacing="0" border="0" class="keyvalue-list">
+                                                <tr>
+                                                    <td align="left" valign="top" class="kv-item-key">Customer :</td>
+                                                    <td align="left" valign="top" class="kv-item-value">Morris Zhu</td>
+                                                </tr>
+                                            </table>
+                                            <table cellpadding="0" cellspacing="0" border="0">
+                                                <tr><td align="left" valign="top" class="kd-blank" style="height: 5px;">&nbsp;</td></tr>
+                                            </table>
+                                            <table cellpadding="0" cellspacing="0" border="0" class="auto-width">
+                                                <tr>
+                                                    <td align="left" valign="top" class="kv-item-key">Delivery Location :</td>
+                                                    <td align="left" valign="top" class="kv-item-value">12 Marina View, Singapore, 018961 12 Marina View, Singapore, 018961 12 Marina View, Singapore, 018961 12 Marina View, Singapore, 018961 12 Marina View, Singapore, 018961</td>
+                                                </tr>
+                                            </table>
+                                            <table cellpadding="0" cellspacing="0" border="0">
+                                                <tr><td align="left" valign="top" class="kd-blank" style="height: 5px;">&nbsp;</td></tr>
+                                            </table>
+                                            <table cellpadding="0" cellspacing="0" border="0" class="auto-width">
+                                                <tr>
+                                                    <td align="left" valign="top" class="kv-item-key">Order From :</td>
+                                                    <td align="left" valign="top" class="kv-item-value">Crave - Hong Leong Building Crave - Hong Leong Building Crave - Hong Leong Building Crave - Hong Leong Building Crave - Hong Leong Building Crave - Hong Leong Building</td>
+                                                </tr>
+                                            </table>
+                                            <table cellpadding="0" cellspacing="0" border="0">
+                                                <tr><td align="left" valign="top" class="kd-blank" style="height: 5px;">&nbsp;</td></tr>
+                                            </table>
+                                            <table cellpadding="0" cellspacing="0" border="0" class="auto-width">
+                                                <tr>
+                                                    <td align="left" valign="top" class="kv-item-key">Order Address :</td>
+                                                    <td align="left" valign="top" class="kv-item-value">16 Raffles Quay, Hong Leong Building, #B1-12, Singapore 048581 16 Raffles Quay, Hong Leong Building, #B1-12, Singapore 048581 16 Raffles Quay, Hong Leong Building, #B1-12, Singapore 048581 16 Raffles Quay, Hong Leong Building, #B1-12, Singapore 048581</td>
+                                                </tr>
+                                            </table>
+                                        </td></tr>
+                                    </table>
+                                    <!--Basic Information End-->
+
+                                    <!--Blank Start-->
+                                    <table cellpadding="0" cellspacing="0" border="0">
+                                        <tr><td align="left" valign="top" class="kd-blank" style="height: 25px;">&nbsp;</td></tr>
+                                    </table>
+                                    <!--Blank End-->
+
+                                    <!--Order Summary Start-->
+                                    <table cellpadding="0" cellspacing="0" border="0" class="order-summary-section">
+                                        <tr><td align="left" valign="top" colspan="3" style="background: #EBEBEB;">
+                                            <table cellpadding="0" cellspacing="0" border="0" class="order-summary-section-title">
+                                                <tr><td align="left" valign="top" class="kd-blank" style="height: 15px;">&nbsp;</td></tr>
+                                                <tr><td align="center" valign="top" class="kd-content">ORDER SUMMARY</td></tr>
+                                                <tr><td align="left" valign="top" class="kd-blank" style="height: 15px;">&nbsp;</td></tr>
+                                            </table>
+                                        </td></tr>
+                                        <tr>
+                                            <td align="left" valign="top" class="kd-line left" style="width: 1px;">&nbsp;</td>
+                                            <td align="left" valign="top" class="kd-content" style="width: 498px;">
+                                                <table cellpadding="0" cellspacing="0" border="0">
+                                                    <tr><td align="left" valign="top" colspan="3" class="kd-blank" style="height: 20px;">&nbsp;</td></tr>
+                                                    <tr>
+                                                        <td align="left" valign="top" class="kd-blank" style="width: 25px;">&nbsp;</td>
+                                                        <td align="left" valign="top" class="kd-content" style="width: 448px;">
+                                                            <table cellpadding="0" cellspacing="0" border="0" class="keyvalue-list">
+                                                                <tr>
+                                                                    <td align="left" valign="top" class="kv-item-key">Payment Method :</td>
+                                                                    <td align="left" valign="top" class="kv-item-value">Visa (1234)</td>
+                                                                </tr>
+                                                            </table>
+
+                                                            <!--Blank Start-->
+                                                            <table cellpadding="0" cellspacing="0" border="0">
+                                                                <tr><td align="left" valign="top" class="kd-blank" style="height: 15px;">&nbsp;</td></tr>
+                                                            </table>
+                                                            <!--Blank End-->
+
+                                                            <!--Line Start-->
+                                                            <table cellpadding="0" cellspacing="0" border="0">
+                                                                <tr><td align="left" valign="top" class="kd-line">&nbsp;</td></tr>
+                                                            </table>
+                                                            <!--Line End-->
+
+                                                            <!--Blank Start-->
+                                                            <table cellpadding="0" cellspacing="0" border="0">
+                                                                <tr><td align="left" valign="top" class="kd-blank" style="height: 15px;">&nbsp;</td></tr>
+                                                            </table>
+                                                            <!--Blank End-->
+
+                                                            <!--Detail Table Start-->
+                                                            <table cellpadding="0" cellspacing="0" border="0" class="detail-table">
+                                                                <tr class="detail-table-title">
+                                                                    <td align="left" valign="top" width="250">Item Description</td>
+                                                                    <td align="center" valign="top" width="125">Quantity</td>
+                                                                    <td align="right" valign="top" width="125">Amount</td>
+                                                                </tr>
+                                                                <tr><td align="left" valign="top" colspan="3" class="kd-line">&nbsp;</td></tr>
+                                                                <tr>
+                                                                    <td align="left" valign="top" width="250">Nasi Lemak with Chicken Cutlet Set</td>
+                                                                    <td align="center" valign="top" width="125">1</td>
+                                                                    <td align="right" valign="top" width="125">SGD 6.50</td>
+                                                                </tr>
+                                                                <tr><td align="left" valign="top" colspan="3" class="kd-line dashed"><img src="../images/line.png" alt="dashed line" /></td></tr>
+                                                                <tr>
+                                                                    <td align="left" valign="top" width="250">Nasi Lemak with Chicken Cutlet Set Na si Lem ak with Chic ken Cut let Set Nasi Lemak wi th Chi cken Cut let Set</td>
+                                                                    <td align="center" valign="top" width="125">1</td>
+                                                                    <td align="right" valign="top" width="125">SGD 6.50</td>
+                                                                </tr>
+                                                                <tr><td align="left" valign="top" colspan="3" class="kd-line dashed"><img src="../images/line.png" alt="dashed line" /></td></tr>
+                                                            </table>
+                                                            <!--Detail Table End-->
+
+                                                            <!--Blank Start-->
+                                                            <table cellpadding="0" cellspacing="0" border="0">
+                                                                <tr><td align="left" valign="top" class="kd-blank" style="height: 10px;">&nbsp;</td></tr>
+                                                            </table>
+                                                            <!--Blank End-->
+
+                                                            <!--Detail Table : Total Part Start-->
+                                                            <table cellpadding="0" cellspacing="0" border="0" class="detail-table-total-part">
+                                                                <tr>
+                                                                    <td align="right" valign="top" width="315"><strong>Subtotal</strong></td>
+                                                                    <td align="right" valign="top" width="185"><strong>SGD 13.00</strong></td>
+                                                                </tr>
+                                                                <tr><td align="right" valign="top" colspan="2" class="kd-blank" style="height: 5px;">&nbsp;</td></tr>
+                                                                <tr>
+                                                                    <td align="right" valign="top" width="315">Difference to Minimum</td>
+                                                                    <td align="right" valign="top" width="185">SGD 0.00</td>
+                                                                </tr>
+                                                                <tr><td align="left" valign="top" colspan="2" class="kd-blank" style="height: 5px;">&nbsp;</td></tr>
+                                                                <tr>
+                                                                    <td align="right" valign="top" width="315">Delivery Fee</td>
+                                                                    <td align="right" valign="top" width="185">SGD 4.00</td>
+                                                                </tr>
+                                                                <tr><td align="left" valign="top" colspan="2" class="kd-blank" style="height: 5px;">&nbsp;</td></tr>
+                                                                <tr>
+                                                                    <td align="right" valign="top" width="315">Packaging Fee</td>
+                                                                    <td align="right" valign="top" width="185">SGD 0.00</td>
+                                                                </tr>
+                                                                <tr><td align="left" valign="top" colspan="2" class="kd-blank" style="height: 5px;">&nbsp;</td></tr>
+                                                                <tr>
+                                                                    <td align="right" valign="top" width="315"><strong class="highlight-orange">Promo</strong></td>
+                                                                    <td align="right" valign="top" width="185"><strong class="highlight-orange">- SGD 4.00</strong></td>
+                                                                </tr>
+
+                                                                <tr><td align="left" valign="top" colspan="2" class="kd-blank" style="height: 10px;">&nbsp;</td></tr>
+                                                                <tr><td align="left" valign="top" colspan="2" class="kd-line">&nbsp;</td></tr>
+                                                                <tr><td align="left" valign="top" colspan="2" class="kd-blank" style="height: 20px;">&nbsp;</td></tr>
+                                                                <tr>
+                                                                    <td align="right" valign="middle" width="315"><strong class="uppercase">Total</strong> ( Inclusive of GST )</td>
+                                                                    <td align="right" valign="middle" width="185"><strong class="highlight-orange gst-total-price">SGD 13.00</strong></td>
+                                                                </tr>
+                                                                <tr><td align="left" valign="top" colspan="2" class="kd-blank" style="height: 5px;">&nbsp;</td></tr>
+                                                                <tr>
+                                                                    <td align="right" valign="top" width="315">GST 7%</td>
+                                                                    <td align="right" valign="top" width="185">SGD 0.00</td>
+                                                                </tr>
+                                                            </table>
+                                                            <!--Detail Table : Total Part End-->
+                                                        </td>
+                                                        <td align="left" valign="top" class="kd-blank" style="width: 25px;">&nbsp;</td>
+                                                    </tr>
+                                                    <tr><td align="left" valign="top" colspan="3" class="kd-blank" style="height: 20px;">&nbsp;</td></tr>
+                                                </table>
+                                            </td>
+                                            <td align="left" valign="top" class="kd-line left" style="width: 1px;">&nbsp;</td>
+                                        </tr>
+                                        <tr><td align="left" valign="top" colspan="3" class="kd-line" style="height: 1px;">&nbsp;</td></tr>
+                                    </table>
+                                    <!--Order Summary End-->
+
+                                    <!--Blank Start-->
+                                    <table cellpadding="0" cellspacing="0" border="0">
+                                        <tr><td align="left" valign="top" class="kd-blank" style="height: 30px;">&nbsp;</td></tr>
+                                    </table>
+                                    <!--Blank End-->
+
+                                    <div class="kd-paragraph">For more enquiries, feel free to chat with us!</div>
+
+                                    <!--Blank Start-->
+                                    <table cellpadding="0" cellspacing="0" border="0">
+                                        <tr><td align="left" valign="top" class="kd-blank" style="height: 20px;">&nbsp;</td></tr>
+                                    </table>
+                                    <!--Blank End-->
+
+                                    <!--Blank Start-->
+                                    <table cellpadding="0" cellspacing="0" border="0" class="button-wrapper">
+                                        <tr><td align="left" valign="top">
+                                            <a href="mailto:support@vv.com.sg"><img src="../images/button-email-us.png" alt="reply email" /></a>
+                                        </td></tr>
+                                    </table>
+                                    <!--Blank End-->
+
+                                    <!--Blank Start-->
+                                    <table cellpadding="0" cellspacing="0" border="0">
+                                        <tr><td align="left" valign="top" class="kd-blank" style="height: 30px;">&nbsp;</td></tr>
+                                    </table>
+                                    <!--Blank End-->
+                                </td>
+                                <td align="left" valign="top" class="kd-blank" style="width: 50px;">&nbsp;</td>
+                            </tr>
+                        </table>
+                    </td></tr>
+                    <!--Body End-->
+
+                    <!--Footer Start-->
+                    <tr><td align="center" valign="top" class="kd-footer">
+                        <!--Blank Start-->
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <tr><td align="left" valign="top" class="kd-blank" style="height: 30px;">&nbsp;</td></tr>
+                        </table>
+                        <!--Blank End-->
+
+                        <div class="kd-paragraph">Follow Us</div>
+
+                        <!--Blank Start-->
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <tr><td align="left" valign="top" class="kd-blank" style="height: 20px;">&nbsp;</td></tr>
+                        </table>
+                        <!--Blank End-->
+
+                        <!--Icons List Start-->
+                        <div class="kd-table-center" style="width: 110px;"><table cellpadding="0" cellspacing="0" border="0" class="auto-width">
+                            <tr>
+                                <td align="left" valign="middle"><a href="https://www.facebook.com/vvtechnologysg/" target="_blank"><img src="../images/icon-facebook.png" alt="facebook" /></a></td>
+                                <td align="left" valign="middle" class="kd-blank" style="width: 30px;">&nbsp;</td>
+                                <td align="left" valign="middle"><a href="https://www.instagram.com/vvtechnologysg/" target="_blank"><img src="../images/icon-linkedin.png" alt="linkedin" /></a></td>
+                                <td align="left" valign="middle" class="kd-blank" style="width: 30px;">&nbsp;</td>
+                                <td align="left" valign="middle"><a href="https://www.linkedin.com/company/vvtechnology" target="_blank"><img src="../images/icon-instagram.png" alt="instagram" /></a></td>
+                            </tr>
+                        </table></div>
+                        <!--Icons List End-->
+
+                        <!--Blank Start-->
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <tr><td align="left" valign="top" class="kd-blank" style="height: 20px;">&nbsp;</td></tr>
+                        </table>
+                        <!--Blank End-->
+
+                        <div class="kd-paragraph">V V Technology Pte Ltd. 12 Marina View, #25-04 Asia Square Tower 2, S018961<br />Copyright © 2019 V V Technology. All rights reserved.</div>
+
+                        <!--Blank Start-->
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <tr><td align="left" valign="top" class="kd-blank" style="height: 20px;">&nbsp;</td></tr>
+                        </table>
+                        <!--Blank End-->
+
+                        <!--Links List Start-->
+                        <div class="kd-table-center" style="width: 210px;"><table cellpadding="0" cellspacing="0" border="0" class="auto-width links-list">
+                            <tr>
+                                <td align="left" valign="middle"><a href="javascript:;" target="_blank">Term</a></td>
+                                <td align="left" valign="middle" class="kd-blank" style="width: 20px;">&nbsp;</td>
+                                <td align="left" valign="middle"><a href="javascript:;" target="_blank">Privacy</a></td>
+                                <td align="left" valign="middle" class="kd-blank" style="width: 20px;">&nbsp;</td>
+                                <td align="left" valign="middle"><a href="http://www.vv.com.sg/" target="_blank">About</a></td>
+                                <td align="left" valign="middle" class="kd-blank" style="width: 20px;">&nbsp;</td>
+                                <td align="left" valign="middle"><a href="http://www.vv.com.sg/careersg" target="_blank">Careers</a></td>
+                            </tr>
+                        </table></div>
+                        <!--Links List End-->
+
+                        <!--Blank Start-->
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <tr><td align="left" valign="top" class="kd-blank" style="height: 60px;">&nbsp;</td></tr>
+                        </table>
+                        <!--Blank End-->
+                    </td></tr>
+                    <!--Footer End-->
+                </table>
+            </td></tr>
+        </table></div>
+    </td></tr>
+</table>
+<!--Mail Template End-->
+</body>
+</html>

@@ -1,0 +1,725 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>V V Life Dining Reservation</title>
+<meta name="viewport" content="width=device-width; initial-scale=1.0;">
+<style type="text/css">
+    /* === Reset Style === */
+        html {
+            width: 100%;
+        }
+        body {/* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/
+            width:100% !important;
+            margin:0px;
+            padding:0px;
+            text-align:left;
+            -webkit-text-size-adjust:100%;
+            -ms-text-size-adjust:100%;
+        }
+        #outlook a {/* Force Outlook to provide a "view in browser" menu link. */
+            padding:0;
+        }
+        .ReadMsgBody {
+            width: 100%;
+        }
+        .ExternalClass {/* Force Hotmail to display emails at full width */
+            width: 100%;
+        }
+
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div {/* Forces Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */
+            line-height: 100%;
+        }
+        .kd-mail-template img {
+            border:0px;
+            text-decoration:none;
+            outline:none;
+            margin: 0;
+        }
+        .kd-mail-template a,
+        .kd-mail-template a:hover {
+            color:#FFA22D;
+            text-decoration:none
+        }
+        .kd-mail-template,
+        .kd-mail-template table {
+            border-collapse:collapse;
+            mso-table-lspace:0pt;
+            mso-table-rspace:0pt;
+            font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, Geneva, sans-serif;
+            font-size:12px;
+            line-height:1.333333333333333em;
+            width:100%;
+            color: #AB8E6E;
+        }
+        .kd-mail-template table.auto-width {
+            width: auto;
+        }
+
+        /**
+         * use <div class="kd-table-center" style="width: 1000px;"> wrapper a table
+         * note: need give one fix width
+         */
+        .kd-mail-template .kd-table-center {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+    /* === Template Style === */
+        /* layout */
+        .kd-mail-template .kd-mail-wrapper {
+            background:#F1F2F4;
+        }
+        .kd-mail-template .kd-container {
+            background:#ffffff;
+            font-size:14px;
+            line-height:20px;
+            width:600px;
+        }
+        .kd-mail-template .line-Start .kd-line {
+            background:#D8D8D8;
+            height:1px;
+            font-size:0;
+            line-height:0;
+        }
+        .kd-mail-template .line-Start .top-line {
+            background: #F38700;
+            height: 5px;
+        }
+        .kd-mail-template .kd-blank {
+            font-size:0;
+            line-height:0;
+        }
+        /* headings */
+        .kd-mail-template .kd-heading {
+            font-weight:bold;
+        }
+        .kd-mail-template .kd-heading.one {
+            font-size:30px;
+        }
+        .kd-mail-template .kd-heading.two {
+            font-size:24px;
+            color: #333;
+            line-height: 33px;
+        }
+        .kd-mail-template .kd-heading.three {
+            font-size:18px;
+        }
+        .kd-mail-template .kd-heading.four {
+            font-size:16px;
+        }
+        .kd-mail-template .kd-heading.five {
+            font-size:14px;
+        }
+        .kd-mail-template .kd-heading.six {
+            font-size:12px;
+        }
+        .kd-mail-template .kd-heading.seven {
+            font-size:18px;
+        }
+        /* body-content */
+        .kd-mail-template .body-content-wrap {
+            background: #FAFAFA;
+            color: #333;
+        }
+        .kd-mail-template .body-content-wrap .kd-bgColor {
+            background: #ffffff;
+        }
+        .kd-mail-template .body-content-wrap .kd-line-one {
+            height: 1px;
+            line-height: 1px;
+        }
+        .kd-mail-template .body-content-wrap .kd-line-two {
+            height: 2px;
+            line-height: 2px;
+        }
+        .kd-mail-template .body-content-wrap .vertical-bar {
+            height: 12px;
+            width: 1px;
+            margin-top: 0;
+            margin-bottom: 4px;
+            margin-right: 10px;
+            margin-left: 10px;
+            display: inline-block;
+            background: #cccccc;
+        }
+        .kd-mail-template .body-content-wrap .kd-line-half-color {
+            height: 0.5px;
+            line-height: 0.5px;
+            background: #F6EEE3;
+        }
+        .kd-mail-template .body-content-wrap .kd-line-one-gray {
+            height: 1px;
+            line-height: 1px;
+            background: #F2F2F2;
+        }
+        .kd-mail-template .body-content-wrap .kd-one-opacity {
+            opacity: 0.31;
+        }
+        .kd-mail-template .body-content-wrap .kd-two-opacity {
+            opacity: 0.49;
+        }
+        .kd-mail-template .body-content-wrap .kd-left-icon {
+            width: 16px;
+        }
+        .kd-mail-template .body-content-wrap .kd-book-border {
+            height: 28px;
+            border: 1px solid #f2f2f2;
+            border-radius: 28px;
+            line-height: 28px;
+        }
+        .kd-mail-template .body-content-wrap .kd-font-style {
+            font-size: 12px;
+            line-height: 16px;
+            word-break: break-all;
+        }
+        .kd-mail-template .body-content-wrap .kd-top-card-wrap {
+            padding-top: 23px; 
+            padding-right: 32px; 
+            padding-bottom: 32px; 
+            padding-left: 32px;
+        }
+        .kd-mail-template .body-content-wrap .kd-top-card-t {
+            text-align: left; 
+            padding-top: 12px;
+        }
+        .kd-mail-template .body-content-wrap .kd-middle-card-wrap {
+            padding-top: 28px; 
+            padding-right: 32px; 
+            padding-bottom: 24px; 
+            padding-left: 32px;
+        }
+        .kd-mail-template .body-content-wrap .kd-middle-card-t {
+            text-align: left; 
+            padding-top: 18px; 
+            padding-bottom: 18px; 
+            padding-left: 0; 
+            padding-right: 0;
+        }
+        /* footer */
+        .kd-mail-template .kd-footer {
+            background: #F1F2F4;
+            color: #B3B3B3;
+        }
+        .kd-mail-template .links-list a {
+            color: #B3B3B3;
+        }
+
+        .kd-order-info-text {
+            color: #CB9F6C;
+            font-size: 12px;
+        }
+
+        .kd-order-info-order {
+            color: #A07F5C;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .kd-main-table-corner {
+            width: 16px;
+        }
+
+        .kd-main-table-left {
+            background: url(../images/main-left-line.jpg) no-repeat;
+            background-size: cover;
+            filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/main-left-line.jpg',  sizingMethod='scale');
+        }
+
+        .kd-main-table-right {
+            background: url(../images/main-right-line.jpg) no-repeat;
+            background-size: cover;
+            filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/main-right-line.jpg',  sizingMethod='scale');
+        }
+        
+    /* === Footer === */
+    /* === Response === */
+        /* @media only screen and (max-width: 640px) {
+            body{
+                width:auto!important;
+            }
+            .kd-mail-template .kd-container {
+                width: auto !important;
+            }
+        } */
+</style>
+</head>
+<body>
+<!--Mail Template Start-->
+<table cellpadding="0" cellspacing="0" border="0" class="kd-mail-template">
+    <tr><td align="center" valign="top" class="kd-mail-wrapper">
+        <div class="kd-table-center" style="width: 600px;">
+            <div style="background: #F38700; height: 5px;"></div><table border="0" cellpadding="0" cellspacing="0" class="kd-container">
+            <tr><td align="center" valign="top">
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <!--Header Start-->
+                    <tr class="kd-header"><td align="left" valign="top">
+                        <div class="kd-table-center" style="width: 105px;"><table cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td align="left" valign="top" class="kd-blank" style="height: 17px;">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="top"><img style="width: 88px; margin: 0 auto;" src="../images/user-logo@2x.png" alt="logo"/></td>
+                            </tr>
+                            <tr>
+                                <td align="left" valign="top" class="kd-blank" style="height: 17px;">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="top">
+                                    <div class="kd-heading two" style="text-align: center;">餐饮预订</div>
+                                </td>
+                            </tr>
+                        </table></div>
+                    </td></tr>
+                    <!--Header End-->
+
+                    <!--Body Start-->
+                    <tr class="kd-body"><td align="left" valign="top">
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td align="left" valign="top" class="kd-blank" style="width: 30px;">&nbsp;</td>
+                                <td align="left" valign="top" style="width: 500px;">
+                                    <!--Blank Start-->
+                                    <table cellpadding="0" cellspacing="0" border="0">
+                                        <tr><td align="left" valign="top" class="kd-blank" style="height: 20px;">&nbsp;</td></tr>
+                                    </table>
+                                    <!--Blank End-->
+
+                                    <!--Content Start-->
+                                    <table cellpadding="0" cellspacing="0" border="0">
+                                        <tr><td align="center" valign="top" class="body-content-wrap">
+                                            <div class="kd-top-card-wrap">
+                                                <div class="kd-heading five" style="text-align: left;">尊敬的xxx,</div>
+                                                <div class="kd-top-card-t">谢您在xxx餐厅的预定。您的预定详情如下：</div>
+                                            </div>
+                                            <!--Middle Card Start-->
+                                            <table cellpadding="0" cellspacing="0" border="0">
+                                                <tr>
+                                                    <td align="left" valign="top" class="kd-blank" style="width: 93px;">&nbsp;</td>
+                                                    <td align="left" valign="top" class="kd-blank kd-bgColor" style="width: 6px; border-top-left-radius: 6px;">&nbsp;</td>
+                                                    <td align="left" valign="top" class="kd-blank kd-bgColor" style="width: 2px;">&nbsp;</td>
+                                                    <td align="left" valign="top" class="kd-blank kd-bgColor" style="height: 6px;">&nbsp;</td>
+                                                    <td align="left" valign="top" class="kd-blank kd-bgColor" style="width: 2px;">&nbsp;</td>
+                                                    <td align="left" valign="top" class="kd-blank kd-bgColor" style="width: 6px; border-top-right-radius: 6px;">&nbsp;</td>
+                                                    <td align="left" valign="top" class="kd-blank" style="width: 93px;">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left" valign="top" class="kd-blank" style="width: 93px;">&nbsp;</td>
+                                                    <td align="left" valign="top" class="kd-blank kd-bgColor" style="width: 6px;">&nbsp;</td>
+                                                    <td align="left" valign="top" class="kd-blank" style="width: 16px;height: 16px">
+                                                        <img class="kd-main-table-corner" src="../images/main-left-top.png" alt="leftTop"/>
+                                                    </td>
+                                                    <td align="left" valign="top" style="height: 16px;" class="kd-blank">
+                                                        <img src="../images/main-top-line.jpg" style="height: 16px;width:100%;overflow: hidden;" alt="topLine" />
+                                                    </td>
+                                                    <td align="left" valign="top" class="kd-blank kd-line-two" style="width: 16px;height: 16px">
+                                                        <img class="kd-main-table-corner" src="../images/main-right-top.png" alt="rightTop" />
+                                                    </td>
+                                                    <td align="left" valign="top" class="kd-blank kd-bgColor" style="width: 6px;">&nbsp;</td>
+                                                    <td align="left" valign="top" class="kd-blank" style="width: 93px;">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left" valign="top" class="kd-blank" style="width: 93px;">&nbsp;</td>
+                                                    <td align="left" valign="top" class="kd-blank kd-bgColor" style="width: 6px;">&nbsp;</td>
+                                                    <td align="left" valign="top" class="kd-blank kd-main-table-left" style="width: 16px;"></td>
+                                                    <td align="left" valign="top" style="width: 344px; background: #fff;" class="kd-blank kd-line-two">
+                                                        <table cellpadding="0" cellspacing="0" border="0">
+                                                            <tr>
+                                                                <td align="left" valign="top" class="kd-blank" style="width: 1px;">&nbsp;</td>
+                                                                <td align="left" valign="top" class="kd-blank" style="height: 4px;">&nbsp;</td>
+                                                                <td align="left" valign="top" class="kd-blank" style="width: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top" class="kd-blank kd-one-opacity kd-line-one" style="width: 1px;">&nbsp;</td>
+                                                                <td align="left" valign="top" class="kd-blank">
+                                                                    <table cellpadding="0" cellspacing="0" border="0">
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank">
+                                                                                <table cellpadding="0" cellspacing="0" border="0">
+                                                                                    <tr>
+                                                                                        <td align="left" valign="align">
+                                                                                            <img style="width: 85px; height: 22px;" src="../images/user-min-logo@2x.png" alt="vv life" />
+                                                                                        </td>
+                                                                                        <td align="right" valign="align">
+                                                                                            <span class="kd-order-info-text">订单号: </span>
+                                                                                            <span class="kd-order-info-order">78YL3N</span>
+                                                                                        </td>
+                                                                                    </tr>  
+                                                                                </table>        
+                                                                            </td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="height: 24px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                            <td align="center" valign="middle">
+                                                                                <img style="width: 50px; height: 38px; border-radius: 4px" src="../images/icon-store@2x.png" alt="store" />
+                                                                            </td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="height: 8px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                            <td align="center" valign="top" class="kd-blank">
+                                                                                <span style="color: #333;word-break: break-all;line-height: initial;" class="kd-heading four">12314</span>
+                                                                            </td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="height: 32px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                            <td align="center" valign="center"><span class="kd-heading seven" style="line-height: initial;">林先生	 
+                                                                            </span></td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="height: 15px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank kd-line-half-color" style="height: 0.5px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="height: 15px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                            <td align="center" valign="center"><div class="kd-heading seven" style="line-height: 16px;">2 人</div></td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="height: 15px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank kd-line-half-color" style="height: 0.5px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="height: 15px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                            <td align="center" valign="center"><div class="kd-heading seven" style="line-height: 16px;">星期三,3月25日 16:00</div></td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="height: 15px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank kd-line-half-color" style="height: 0.5px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="height: 11px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                            <td align="left" valign="center"><table cellpadding="0" cellspacing="0" 
+                                                                                border="0">
+                                                                                    <tr><td align="left" valign="top" style="width: 28px;"><img 
+                                                                                        class="kd-left-icon" src="../images/phone-icon.png" alt="edit" /></td><td align="left" valign="center"><div class="kd-font-style">+65 8888888</div></td></tr>
+                                                                                </table></td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="height: 12px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank kd-line-half-color" style="height: 0.5px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="height: 14px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                            <td align="left" valign="center"><table cellpadding="0" cellspacing="0" 
+                                                                                border="0">
+                                                                                    <tr><td align="left" valign="top" style="width: 28px;"><img 
+                                                                                        class="kd-left-icon" src="../images/email-icon.png" alt="edit" /></td><td align="left" valign="center"><div class="kd-font-style">linwenbin@vv.cn</div></td></tr>
+                                                                                </table></td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="height: 14px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank kd-line-half-color" style="height: 0.5px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="height: 14px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                            <td 
+                                                                            align="left" valign="center">
+                                                                                <table cellpadding="0" cellspacing="0" border="0">
+                                                                                    <tr>
+                                                                                        <td align="left" valign="top" style="width: 28px;">
+                                                                                            <img class="kd-left-icon" src="../images/text-icon.png" alt="edit" />
+                                                                                        </td>
+                                                                                        <td align="left" valign="center">
+                                                                                            <div class="kd-font-style">
+                                                                                                希望有一个安静的位子
+                                                                                            </div>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="height: 14px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank kd-line-half-color" style="height: 0.5px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="height: 14px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                            <td align="left" valign="center">
+                                                                                <table cellpadding="0" cellspacing="0" border="0">
+                                                                                    <tr>
+                                                                                        <td style="width: 28px;">
+                                                                                            <img class="kd-left-icon" src="../images/address-icon.png" alt="location" />
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <div class="kd-font-style">乌节路176号先得坊大厦购物中心B座二层29/30，018999</div>
+                                                                                        </td>
+                                                                                        <td style="width: 50px;">
+                                                                                            <div style="color:#FFA22D;" class="six">
+                                                                                                <a href="https://www.google.com.sg/maps/search/40A+ORCHARD+ROAD+MACDONALD+HSE+SINGAPORE/" target="_blank">
+                                                                                                    <div class="kd-font-style" style="padding-left: 10px;">
+                                                                                                        导航 
+                                                                                                        <img width="5" src="../images/address-right-icon.png" alt="address" />
+                                                                                                    </div>
+                                                                                                </a>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="height: 14px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank kd-line-half-color" style="height: 0.5px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="height: 14px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                            <td align="left" valign="center"><table cellpadding="0" cellspacing="0" border="0">
+                                                                                <tr>
+                                                                                    <td style="width: 28px;"><img 
+                                                                                        class="kd-left-icon" src="../images/warn-icon.png" alt="remind" /></td>
+                                                                                    <td><div class="kd-font-style">您预定的位置只保留15分钟，我们不能保证您在此之后的预定。</div></td>
+                                                                                </tr>
+                                                                            </table></td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="height: 0px;">&nbsp;</td>
+                                                                            <td align="left" valign="top" class="kd-blank" style="width: 3px;">&nbsp;</td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                                <td align="left" valign="top" class="kd-blank kd-one-opacity kd-line-one" style="width: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top" class="kd-blank kd-one-opacity kd-line-one" style="width: 1px;border-bottom-left-radius: 1px">&nbsp;</td>
+                                                                <td align="left" valign="top" class="kd-one-opacity kd-line-one" style="height: 1px;">&nbsp;</td>
+                                                                <td align="left" valign="top" class="kd-blank kd-one-opacity kd-line-one" style="width: 1px;border-bottom-right-radius: 1px">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top" class="kd-blank" style="width: 1px;">&nbsp;</td>
+                                                                <td align="left" valign="top" class="kd-blank" style="height: 4px;">&nbsp;</td>
+                                                                <td align="left" valign="top" class="kd-blank" style="width: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td align="left" valign="top" class="kd-blank kd-main-table-right" style="width: 16px;"></td>
+                                                    <td align="left" valign="top" class="kd-blank kd-bgColor" style="width: 6px;">&nbsp;</td>
+                                                    <td align="left" valign="top" class="kd-blank" style="width: 93px;">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left" valign="top" class="kd-blank" style="width: 93px;">&nbsp;</td>
+                                                    <td align="left" valign="top" class="kd-blank kd-bgColor" style="width: 6px;">&nbsp;</td>
+                                                    <td align="left" valign="top" class="kd-blank" style="width: 16px;height: 16px;">
+                                                        <img class="kd-main-table-corner" src="../images/main-left-bottom.png" alt="leftBottom"/>
+                                                    </td>
+                                                    <td align="left" valign="top" style="height: 16px;" class="kd-blank">
+                                                        <img src="../images/main-bottom-line.jpg" style="height: 16px; width: 100%;overflow: hidden;" alt="bottomLine"/>    
+                                                    </td>
+                                                    <td align="left" valign="top" class="kd-blank" style="width: 16px;height: 16px;">
+                                                        <img class="kd-main-table-corner" src="../images/main-right-bottom.png" alt="rightBottom"/>
+                                                    </td>
+                                                    <td align="left" valign="top" class="kd-blank kd-bgColor" style="width: 6px;">&nbsp;</td>
+                                                    <td align="left" valign="top" class="kd-blank" style="width: 93px;">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left" valign="top" class="kd-blank" style="width: 93px;">&nbsp;</td>
+                                                    <td align="left" valign="top" class="kd-blank kd-bgColor" style="width: 6px;border-bottom-left-radius: 6px;">&nbsp;</td>
+                                                    <td align="left" valign="top" class="kd-blank kd-bgColor" style="width: 2px;">&nbsp;</td>
+                                                    <td align="left" valign="top" class="kd-blank kd-bgColor" style="height: 6px;">&nbsp;</td>
+                                                    <td align="left" valign="top" class="kd-blank kd-bgColor" style="width: 2px;">&nbsp;</td>
+                                                    <td align="left" valign="top" class="kd-blank kd-bgColor" style="width: 6px;border-bottom-right-radius: 6px;">&nbsp;</td>
+                                                    <td align="left" valign="top" class="kd-blank" style="width: 93px;">&nbsp;</td>
+                                                </tr>
+                                            </table>
+                                            <!--Middle Card End-->
+                                            <div class="kd-middle-card-wrap">
+                                                <div style="text-align: left;">	
+                                                    我们期待您的光临</div>
+                                                <div class="kd-middle-card-t">此致</div>
+                                                <div class="kd-heading five" style="text-align: left;">The VV Life Team</div>
+                                            </div>
+                                        </td></tr>
+                                    </table>
+                                    <!--Content End-->
+
+                                    <!--Blank Start-->
+                                    <table cellpadding="0" cellspacing="0" border="0">
+                                        <tr><td align="left" valign="top" class="kd-blank" style="height: 30px;">&nbsp;</td></tr>
+                                    </table>
+                                    <!--Blank End-->
+                                </td>
+                                <td align="left" valign="top" class="kd-blank" style="width: 30px;">&nbsp;</td>
+                            </tr>
+                        </table>
+                    </td></tr>
+                    <!--Body End-->
+
+                    <!--Footer Start-->
+                    <tr><td align="center" valign="top" class="kd-footer">
+                        <!--Blank Start-->
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <tr><td align="left" valign="top" class="kd-blank" style="height: 6px;">&nbsp;</td></tr>
+                        </table>
+                        <!--Blank End-->
+
+                        <div>Follow Us</div>
+
+                        <!--Blank Start-->
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <tr><td align="left" valign="top" class="kd-blank" style="height: 20px;">&nbsp;</td></tr>
+                        </table>
+                        <!--Blank End-->
+
+                        <!--Icons List Start-->
+                        <div class="kd-table-center" style="width: 110px;"><table cellpadding="0" cellspacing="0" border="0" class="auto-width">
+                            <tr>
+                                <td align="left" valign="middle"><a href="https://www.facebook.com/vvtechnologysg/" target="_blank"><img src="../images/icon-facebook.png" alt="facebook" /></a></td>
+                                <td align="left" valign="middle" class="kd-blank" style="width: 30px;">&nbsp;</td>
+                                <td align="left" valign="middle"><a href="https://www.instagram.com/vvtechnologysg/" target="_blank"><img src="../images/icon-linkedin.png" alt="linkedin" /></a></td>
+                                <td align="left" valign="middle" class="kd-blank" style="width: 30px;">&nbsp;</td>
+                                <td align="left" valign="middle"><a href="https://www.linkedin.com/company/vvtechnology" target="_blank"><img src="../images/icon-instagram.png" alt="instagram" /></a></td>
+                            </tr>
+                        </table></div>
+                        <!--Icons List End-->
+
+                        <!--Blank Start-->
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <tr><td align="left" valign="top" class="kd-blank" style="height: 20px;">&nbsp;</td></tr>
+                        </table>
+                        <!--Blank End-->
+
+                        <div style="width: 600px;" class="kd-table-center">V V Technology Pte Ltd. 12 Marina View, #25-04 Asia Square Tower 2, S018961<br />Copyright © 2019 V V Technology. All rights reserved.</div>
+
+                        <!--Blank Start-->
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <tr><td align="left" valign="top" class="kd-blank" style="height: 20px;">&nbsp;</td></tr>
+                        </table>
+                        <!--Blank End-->
+
+                        <!--Links List Start-->
+                        <div class="kd-table-center" style="width: 260px;"><table cellpadding="0" cellspacing="0" border="0" class="auto-width links-list">
+                            <tr>
+                                <td align="left" valign="middle"><a href="javascript:;" target="_blank"><div style="width: 60px; text-align: center;">Term</div></a></td>
+                                <td align="left" valign="middle" class="kd-blank" style="width: 20px;">&nbsp;</td>
+                                <td align="left" valign="middle"><a href="javascript:;" target="_blank"><div style="width: 60px; text-align: center;">Privacy</div></a></td>
+                                <td align="left" valign="middle" class="kd-blank" style="width: 20px;">&nbsp;</td>
+                                <td align="left" valign="middle"><a href="http://www.vv.com.sg/" target="_blank"><div style="width: 60px; text-align: center;">About</div></a></td>
+                                <td align="left" valign="middle" class="kd-blank" style="width: 20px;">&nbsp;</td>
+                                <td align="left" valign="middle"><a href="http://www.vv.com.sg/careersg" target="_blank"><div style="width: 60px; text-align: center;">Careers</div></a></td>
+                            </tr>
+                        </table></div>
+                        <!--Links List End-->
+
+                        <!--Blank Start-->
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <tr><td align="left" valign="top" class="kd-blank" style="height: 60px;">&nbsp;</td></tr>
+                        </table>
+                        <!--Blank End-->
+                    </td></tr>
+                    <!--Footer End-->
+                </table>
+            </td></tr>
+        </table></div>
+    </td></tr>
+</table>
+<!--Mail Template End-->
+</body>
+</html>

@@ -1,0 +1,120 @@
+.actionCircle{
+    position: fixed;
+    bottom:100px;
+    right:100PX;
+    width:100px;
+    height:100px;
+    border-radius: 50%;;
+    color:#fff;
+    background-color: rgba(0, 0, 0, .7);
+    overflow: hidden;
+    &.actionClicked{
+        overflow: initial;
+        background-color: transparent;
+        .actionName{
+            display: none;
+        }
+    }
+    .actionName{
+        width:100px;
+        height:100px;
+        line-height: 100px;
+        text-align: center;
+        font-size:24px;
+        cursor: pointer;
+    }
+    .actionBox{
+        position: absolute;
+        width:0;
+        height:0;
+        right:0;
+        bottom:0;
+        padding:40px 10px;
+        background-color: rgba(0, 0, 0, .7);
+        overflow: none;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,.6);
+        display: none;
+        &.actionBoxActive{
+            display: initial;
+            width:700px;
+            height:320px;
+        }
+        .closeIcon{
+            position: absolute;
+            width:20px;
+            height:20px;
+            right:10px;
+            top:20px;
+            cursor: pointer;
+        }
+        .formArea{
+            display: flex;
+            flex-wrap: wrap;
+            padding:20px;
+           .formUnit{
+                flex:0 0 100%;
+                display: flex;
+                padding:4px 2px;
+                margin-bottom:10px;
+                .choices{
+                    display: flex;
+                    .choice{
+                        flex:1;
+                        margin:5px 0;
+                        padding:2px 10px;
+                        border-right:#1890ff;
+                        line-height: 24px;
+                        border-radius: 3px;
+                        &.choiceActive{
+                            background:#1890ff;
+                            color:#fff;
+                        }
+                    }
+                }
+               .labelName{
+                    flex:0 0 100px;
+                    height:34px;
+                    padding:4px 10px;
+                    line-height: 26px;;
+                    font-size:14px;
+                    text-align: right;
+               }
+               .formControl{
+                    flex:1;
+                    display: block;
+                    height: 34px;
+                    padding: 4px 10px;
+                    font-size: 14px;
+                    line-height: 1.428571429;
+                    color: #555555;
+                    vertical-align: middle;
+                    background-color: #ffffff;
+                    border: 1px solid #cccccc;
+                    border-radius: 4px;
+                    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+                    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+                    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+                    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+                    &:foucs{
+                        border-color: #66afe9;
+                        outline: 0;
+                        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+                        box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+                    }
+                    &[type=button]{
+                        flex:0 0 auto;
+                        color: #fff;
+                        background-color: #1890ff;
+                        border-color: #1890ff;
+                        text-shadow: 0 -1px 0 rgba(0,0,0,.12);
+                        -webkit-box-shadow: 0 2px 0 rgba(0,0,0,.045);
+                        box-shadow: 0 2px 0 rgba(0,0,0,.045);
+                        cursor: pointer;
+                    }
+               }
+           }
+            
+        }
+    }
+}
