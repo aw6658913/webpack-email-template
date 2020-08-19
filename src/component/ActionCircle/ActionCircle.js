@@ -13,7 +13,7 @@ class ActionCircle extends React.Component {
             templateHtmlContent:'',
             acionToggle:false,
             formData:{
-                targetAddress:'linwenbin@vv.cn',
+                targetAddress:'',
                 mailTitle:'测试邮件',
                 sendMan:'发件人',
                 type:null
